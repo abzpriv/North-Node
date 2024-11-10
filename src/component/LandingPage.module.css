@@ -1,0 +1,973 @@
+.landingPage {
+    background: linear-gradient(to right, #120c01 60%, #120c01 60%);
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+transition: all 1s ease-in-out;
+    transform-origin: 50% 5%;
+        z-index: 1;
+}
+
+
+.MainHeading {
+font-family: "Segoe UI Light",
+    sans-serif;
+}
+
+.landingPage.compact {
+    position: fixed;
+    -webkit-transform: translateX(-25%) translateY(10px) scale(0.85);
+    -moz-transform: translateX(-25%) translateY(10px) scale(0.85);
+    -ms-transform: translateX(-25%) translateY(10px) scale(0.85);
+    transform: translateX(-25%) translateY(10px) scale(0.85);
+
+    opacity: 0.95;
+    width: 95%;
+    margin-left: 200px;
+
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+@media (min-width: 2560px) {
+    .landingPage.compact {
+        -webkit-transform: translateX(-25%) translateY(10px) scale(0.85);
+        -moz-transform: translateX(-25%) translateY(10px) scale(0.85);
+        -ms-transform: translateX(-25%) translateY(10px) scale(0.85);
+        transform: translateX(-25%) translateY(10px) scale(0.85);
+
+        width: 95%;
+        margin-left: 250px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .landingPage.compact {
+            -webkit-transform: translateX(-20%) translateY(10px) scale(0.85);
+            -moz-transform: translateX(-20%) translateY(10px) scale(0.85);
+            -ms-transform: translateX(-20%) translateY(10px) scale(0.85);
+            transform: translateX(-20%) translateY(10px) scale(0.85);
+    
+            width: 85%;
+            margin-left: 60px;
+        }
+
+
+
+}
+@media (max-width: 640px){
+    .landingPage.compact {
+        margin-left: 90px;
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 2559px) {
+    .landingPage.compact {
+        -webkit-transform: translateX(-20%) translateY(10px) scale(0.85);
+        -moz-transform: translateX(-20%) translateY(10px) scale(0.85);
+        -ms-transform: translateX(-20%) translateY(10px) scale(0.85);
+        transform: translateX(-20%) translateY(10px) scale(0.85);
+
+        width: 95%;
+        margin-left: 90px;
+        margin-top: 20px;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .landingPage.compact {
+        -webkit-transform: translateX(-25%) translateY(5px) scale(0.9);
+        -moz-transform: translateX(-25%) translateY(5px) scale(0.9);
+        -ms-transform: translateX(-25%) translateY(5px) scale(0.9);
+        transform: translateX(-25%) translateY(5px) scale(0.9);
+
+        width: 85%;
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .landingPage.compact {
+        -webkit-transform: translateX(-35%) translateY(5px) scale(0.9);
+        -moz-transform: translateX(-35%) translateY(5px) scale(0.9);
+        -ms-transform: translateX(-35%) translateY(5px) scale(0.9);
+        transform: translateX(-35%) translateY(5px) scale(0.9);
+
+        width: 80%;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .landingPage.compact {
+        -webkit-transform: translateX(-80%) translateY(0) scale(0.9);
+        -moz-transform: translateX(-80%) translateY(0) scale(0.9);
+        -ms-transform: translateX(-80%) translateY(0) scale(0.9);
+        transform: translateX(-80%) translateY(0) scale(0.9);
+
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+.scroller {
+    display: flex;
+    overflow: hidden;
+}
+
+.infiniteScroll {
+    display: flex;
+    animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
+@media (max-width: 768px) {
+    .infiniteScroll {
+        animation-duration: 50s;
+    }
+}
+
+@media (max-width: 425px) {
+    .infiniteScroll {
+        animation-duration: 60s;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0); 
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.scrolled {
+    background: rgba(18, 12, 1, 0.9); 
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+.navbarMenu {
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.header.scrolled,
+.navbarMenu.scrolled {
+    background: #17120b;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.menuIcon {
+    z-index: 20;
+    position: relative;
+    z-index: 1000;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #ffffff;
+    transition: color 0.3s;
+}
+
+.menuIcon:hover {
+    color: #C79100;
+}
+
+.horizontalLines {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+    width: 100vw;
+    position: fixed;
+    top: 80px;
+    z-index: 900;
+}
+
+.line {
+    height: 2px;
+    background: linear-gradient(to right, #C79100, transparent);
+    flex: 1;
+    margin: 0 0.5rem;
+}
+
+.lineSecond {
+    height: 2px;
+    background: linear-gradient(to right, transparent, #C79100);
+    flex: 1;
+    margin: 0 0.5rem;
+}
+@media (max-width: 768px) {
+    .horizontalLines {
+        top: 71px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .horizontalLines {
+        top: 71px;
+    }
+}
+
+.logo img {
+    max-width: 180px;
+}
+
+.nav {
+    position: absolute;
+    right: 2rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.joinLink {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: "Segoe UI Light",
+    sans-serif;
+    transition: color 0.3s;
+}
+
+.joinLink:hover {
+    color: #C79100;
+}
+
+.mainContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.leftContent {
+    max-width: 45%;
+}
+
+.title {
+    font-family: 'Baskerville Old Face', serif;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.highlight {
+    color: #C79100;
+}
+
+.description {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #CCCCCC;
+}
+
+.searchContainerLandingPage {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 4px;
+    width: 100%;
+    
+}
+.toggleSwitch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 20px;
+    transition: background-color 0.2s;
+}
+
+.toggleSwitch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggleSwitchSlide {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 20px;
+}
+
+.toggleSwitchSlide:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.toggleSwitchSlide {
+    background-color: #2196F3;
+}
+
+input:checked+.toggleSwitchSlide:before {
+    transform: translateX(14px);
+}
+
+.inputWrapperLandingPage {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    flex-grow: 1;
+}
+
+.searchInputLandingPage {
+    padding: 0.75rem 1rem;
+    padding-left: 40px;
+    font-size: 1rem;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    background-color: #3C3C3C;
+    color: #FFFFFF;
+    outline: none;
+}
+
+.searchLogo {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: auto;
+    pointer-events: none;
+}
+
+.findAdvisorButton {
+    padding: 0.75rem 1.25rem;
+    background-color: #C79100;
+    border: none;
+    font-size: 0.8rem;
+    border-radius: 20px;
+    color: #000000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    
+}
+
+.advisorButtonText {
+    font-size: 0.9rem;
+    color: #FFFFFF;
+}
+
+.findAdvisorButton:hover {
+    background-color: #B28100;
+}
+@media (min-width: 640px) {
+    .findAdvisorButton {
+       
+        height: 100%;
+    }
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .searchContainerLandingPage {
+        margin-top: 100px;
+       width: 100%;
+        align-items: flex-start;
+    }
+
+    .inputWrapperLandingPage {
+        width: 60%;
+        margin-bottom: 1rem;
+    }
+
+    .findAdvisorButton {
+        width: 20%;
+        height: 100%;
+        border-radius: 10px;
+    }
+    .advisorButtonText {
+        font-size: 6px;
+    }
+}
+
+
+.rightContent {
+    max-width: 40%;
+}
+
+.cardOfTheDay {
+    padding: 2rem;
+    border-radius: 8px;
+    
+    position: relative;
+    z-index: 1000;
+    color: #FFFFFF;
+}
+
+.cardOfTheDay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, #C79100, transparent);
+}
+
+.cardDate {
+    font-size: 4rem;
+  
+    font-weight: 700;
+   
+    margin: 0;
+}
+
+.cardOfTheDayTitle {
+    font-size: 1.9rem;
+    margin-top: -0.5rem;
+    margin-bottom: 0.5rem;
+    color: #CCCCCC;
+}
+
+.cardOfTheDayMainTitle {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    z-index: 1000;
+    color: #FFFFFF;
+}
+
+.cardOfTheDayDescription {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    z-index: 1000;
+    color: #CCCCCC;
+}
+
+.cardOfTheDay .starIcon {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 24px;
+    height: 24px;
+}
+
+
+.cardOfTheDay .bottomLine {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 3px;
+    background: linear-gradient(to right, #C79100, transparent);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.cardOfTheDay .starIcon {
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+    width: 50px;
+    height: 24px;
+}
+
+.starIcon,
+.zodiacCircle,
+.starPattern {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.starIcon {
+    top: 80%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    transform: translate(0, -50%);
+}
+.lineBelowTitle {
+    width: 100%;
+    max-width: 300px;
+    height: 2px;
+    background: linear-gradient(to right, #C79100, transparent);
+    margin: 0 auto 20px auto;
+    transform: translateX(-28px);
+
+    @media (min-width: 2560px) {
+        max-width: 500px;
+        transform: translateX(-160px);
+    }
+       
+
+    @media (min-width: 1920px) {
+        max-width: 450px;
+        transform: translateX(-140px);
+    }
+
+    @media (min-width: 1440px) {
+        max-width: 400px;
+        transform: translateX(-30px);
+    }
+
+    @media (max-width: 1440px) {
+        max-width: 350px;
+        transform: translateX(-40px);
+    }
+
+    @media (max-width: 1024px) {
+        transform: translateX(-30px);
+    }
+
+    @media (max-width: 768px) {
+        width: 70%;
+        transform: translateX(-40px);
+    }
+
+    @media (max-width: 480px) {
+        width: 90%;
+        transform: translateX(-20px);
+    }
+
+    @media (max-width: 320px) {
+        width: 90%;
+        transform: translateX(-10px);
+    }
+}
+
+
+.zodiacContainer {
+    background: radial-gradient(at center, rgba(159, 115, 28, 0.6) -100%, rgba(141, 126, 43, 0) 70%);
+    position: absolute;
+    top: -22%;
+    right: -350px;
+    width: 600px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulse 3s infinite ease-in-out;
+    pointer-events: none;
+    overflow: hidden;
+}
+.zodiacImage {
+    width: 40%;
+    height: 40%;
+    margin-top: 40px;
+    margin-right: 190px;
+    object-fit: contain;
+    filter: brightness(0.8);
+    transition: filter 0.3s ease;
+}
+
+.zodiacImage:hover {
+    filter: brightness(1);
+}
+.starPattern {
+    bottom: -120px;
+    left: -230px;
+    width: 150px;
+    height: 150px;
+    z-index: 0;
+}
+
+.separator {
+    width: 100%;
+    height: 2px;
+    background-color: #C79100;
+    margin: 2rem 0;
+}
+@media (max-width: 768px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 1rem;
+    }
+
+    .logo img {
+        max-width: 100px;
+    }
+
+    .nav {
+        position: static;
+        font-size: 0.9rem;
+        padding-right: 1rem;
+    }
+
+    .joinLink {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+        margin-left: auto;
+        font-size: 0.9rem;
+    }
+
+    .mainContent {
+        padding: 2rem 1rem;
+        max-width: 100%;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .leftContent,
+    .rightContent {
+        max-width: 100%;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 1.8rem;
+        line-height: 1.2;
+        margin-bottom: 0.8rem;
+        position: relative;
+        z-index: 2;
+    }
+
+        
+       
+         
+
+        .zodiacContainer {
+            top: 35%;
+            right: -130px;
+            width: 300px;
+            height: 300px;
+        }
+    
+        .zodiacImage {
+            width: 40%;
+            height: 40%;
+            margin-top: 20px;
+            margin-right: 100px;
+        }
+        
+    
+    .cardOfTheDay {
+        padding: 1.5rem 1rem;
+        margin-top: 1.5rem;
+        
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .cardDate {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .cardOfTheDayTitle {
+        font-size: 1.5rem;
+        margin-top: -0.2rem;
+        margin-bottom: 0.5rem;
+        color: #CCCCCC;
+    }
+
+    .cardOfTheDayDescription {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        color: #CCCCCC;
+    }
+
+    .starIcon {
+        top: 95%;
+        left: 50%;
+        width: 30px;
+        height: 30px;
+        transform: translate(0, -50%);
+    }
+
+    .starPattern {
+        bottom: -80px;
+        left: 10px;
+        max-width: 60px;
+        max-height: 60px;
+    }
+
+    .separator {
+        margin: 1.2rem 0;
+    }
+}
+@media (min-width: 1024px) {
+    .searchContainerLandingPage{
+        margin-left: 190px;
+    }
+    .starPattern{
+        margin-left: 80px;
+
+    }
+    
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 2rem;
+    }
+
+    .logo img {
+        max-width: 140px;
+    }
+
+    .nav {
+        font-size: 1rem;
+        padding-right: 1.5rem;
+    }
+
+    .joinLink {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+        margin-left: auto;
+        font-size: 1rem;
+    }
+
+    .mainContent {
+        padding: 3rem 2rem;
+        max-width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .leftContent,
+    .rightContent {
+        max-width: 48%;
+        text-align: left;
+        margin-bottom: 0;
+    }
+        .searchContainerLandingPage {
+            margin-top: 2rem;
+            display: flex;
+            padding: 0.5rem;
+            border-radius: 4px;
+            width: 100%;
+            margin-left: 170px;
+    
+        }
+
+    .title {
+        font-size: 2.5rem;
+        line-height: 1.4;
+        margin-bottom: 1rem;
+        position: relative;
+        z-index: 2;
+    }
+
+    .description {
+        margin-top: 1rem;
+        font-size: 1.1rem;
+        line-height: 1.8;
+        position: relative;
+        z-index: 2;
+    }
+               
+
+        .zodiacContainer {
+            top: -15%;
+            right: -200px;
+            width: 450px;
+            height: 400px;
+        }
+    
+        .zodiacImage {
+            width: 50%;
+            height: 50%;
+            margin-top: 30px;
+            margin-right: 150px;
+        }
+        
+
+    
+
+    .cardOfTheDay {
+        padding: 2.5rem 2rem;
+        margin-top: 2rem;
+        border-radius: 8px;
+        text-align: left;
+    }
+
+    .cardDate {
+        font-size: 3.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .cardOfTheDayTitle {
+        font-size: 1.8rem;
+        margin-top: -0.2rem;
+        margin-bottom: 0.5rem;
+        color: #CCCCCC;
+    }
+
+    .cardOfTheDayDescription {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #CCCCCC;
+    }
+        .searchContainerLandingPage {
+            margin-top: 2rem;
+            display: flex;
+            padding: 0.5rem;
+            border-radius: 4px;
+            width: 100%;
+            margin-left: 170px;
+    
+        }
+        .advisorButtonText {
+            font-size: 10px;
+        }
+
+    .starIcon {
+        top: 95%;
+        left: 50%;
+        width: 40px;
+        height: 40px;
+       
+        transform: translate(0, -50%);
+    }
+
+    .starPattern {
+        bottom: -80px;
+        left: 10px;
+        max-width: 70px;
+        max-height: 70px;
+    }
+
+    .separator {
+        margin: 2rem 0;
+       
+    }
+}
+@media (min-width: 1440px) {
+    .searchContainerLandingPage {
+            margin-top: 2rem;
+            display: flex;
+            padding: 0.5rem;
+            border-radius: 4px;
+            width: 100%;
+            margin-left: 170px;
+    
+        
+}
+    
+}
+@media (min-width: 2560px) {
+    .landingPage {
+        background: linear-gradient(to right, #120c01 70%, #120c01 30%);
+    }
+
+    .mainContent {
+        padding: 6rem 4rem;
+        max-width: 1800px;
+    }
+
+    .leftContent,
+    .rightContent {
+        max-width: 50%;
+    }
+
+    .title {
+        font-size: 3.5rem;
+    }
+
+    .description {
+        font-size: 1.2rem;
+    }
+        .searchContainerLandingPage {
+            margin-top: 2rem;
+            display: flex;
+            padding: 0.5rem;
+            border-radius: 4px;
+            width: 100%;
+            margin-left: 670px;
+    
+        }
+
+    
+
+
+        
+    
+        .zodiacImage {
+            width: 60%;
+            height: 60%;
+            margin-top: 100px;
+            margin-right: 100px;
+        }
+   
+
+    
+
+    .cardOfTheDay {
+        padding: 3rem;
+    }
+
+    .cardDate {
+        font-size: 5rem;
+    }
+
+    .cardOfTheDayTitle {
+        font-size: 2.2rem;
+    }
+
+    .cardOfTheDayMainTitle {
+        font-size: 2.5rem;
+    }
+
+    .cardOfTheDayDescription {
+        font-size: 1.1rem;
+    }
+
+    .starIcon {
+        width: 60px;
+        
+        height: 60px;
+    }
+}

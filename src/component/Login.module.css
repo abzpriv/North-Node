@@ -1,0 +1,377 @@
+/* Base styles for container and main layout */
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 1rem;
+}
+
+.header {
+    width: 100%;
+    max-width: 1200px;
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    height: 4rem;
+    margin-bottom: 1rem;
+}
+
+.headerButtons {
+    display: flex;
+    gap: 1rem;
+}
+
+.customerButton,
+.advisorButton {
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.375rem;
+    font-size: 15px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
+}
+
+.customerButton {
+    background-color: #fbbf24;
+    color: black;
+}
+
+.customerButton:hover {
+    background-color: #f59e0b;
+}
+
+.advisorButton {
+    background-color: black;
+    color: white;
+}
+
+.advisorButton:hover {
+    background-color: #1f2937;
+}
+
+/* Main content styling and responsiveness */
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 3rem;
+    padding: 0.75rem;
+}
+
+.formSection {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.formTitle {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 1.25rem;
+    color: black;
+}
+
+.formSubtitle {
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+}
+
+.socialButtonsContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.inputContainer {
+    position: relative;
+    
+    margin-bottom: 1.5rem;
+}
+
+.iconWrapper {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+}
+
+.inputIcon {
+    width: 20px;
+    height: 20px;
+    opacity: 0.5;
+}
+
+.formInput {
+    width: 100%;
+    padding: 0.75rem 2.5rem;
+    border-radius: 0.375rem;
+    border: 1px solid #d1d5db;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    font-size: 1rem;
+    color: #4b5563;
+    background: transparent;
+}
+
+.formInput:focus {
+    outline: none;
+    border-color: #000000;
+    box-shadow: 0 0 0 1px #000000;
+}
+
+.formInput:focus+.floatingLabel,
+.formInput:not(:placeholder-shown)+.floatingLabel {
+    top: -0.75rem;
+    left: 2.5rem;
+    font-size: 0.75rem;
+    color: #000000;
+}
+
+.floatingLabel {
+    position: absolute;
+    pointer-events: none;
+    left: 2.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    color: #9ca3af;
+}
+
+.socialButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    font-size: 10px;
+    /* Reduced padding */
+    border: 1px solid #d1d5db;
+    border-radius: 0.675rem;
+    background-color: #f3f4f6;
+    transition: background-color 0.3s ease;
+    width: 48%;
+}
+
+.socialButton:hover {
+    background-color: #e2e8f0;
+}
+
+.socialIcon {
+    height: 1.25rem;
+    width: 1.25rem;
+    margin-right: 0.5rem;
+}
+.textIcon {
+    color: #000000;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem 0;
+}
+
+.dividerLine {
+    width: 100%;
+    border-top: 1px solid #020202;
+}
+
+.dividerText {
+    margin: 0 1.25rem;
+    color: #4b5563;
+}
+
+.inputContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+
+.iconWrapper {
+    position: absolute;
+    left: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.eyeIconWrapper {
+    position: absolute;
+    right: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.inputIcon,
+.eyeIcon {
+    width: 20px;
+    height: 20px;
+    opacity: 0.5;
+}
+
+.formInput {
+    width: 100%;
+    padding: 0.625rem 2rem;
+    border-radius: 0.675rem;
+    border: 1px solid #d1d5db;
+    transition: box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.formInput:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #000000;
+}
+
+.formFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.checkboxInput {
+    margin-right: 0.5rem;
+}
+
+.checkboxLabel {
+    color: #000000;
+}
+
+.forgotPassword {
+    color: #000000;
+    text-decoration: underline;
+}
+
+.forgotPassword:hover {
+    text-decoration: none;
+}
+
+.loginButton {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 0.75rem;
+    border-radius: 0.475rem;
+    transition: background-color 0.3s ease;
+}
+
+.errorText {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    font-size: 12px;
+    color: #e53e3e;
+    margin-top: 4px;
+}
+
+.errorInput {
+    border-color: red;
+    box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.25);
+}
+
+.loginButton:hover {
+    background-color: #1f2937;
+}
+
+/* Image section styling and responsiveness */
+.imageSection {
+    width: 100%;
+    max-width: 550px;
+    display: flex;
+    justify-content: center;
+    padding-right: 0.75rem;
+}
+
+.image {
+    max-width: 95%;
+    margin-left: 1.5rem;
+}
+
+/* Responsive design adjustments */
+@media (min-width: 768px) {
+    .mainContent {
+        flex-direction: row;
+        padding: 2rem;
+    }
+
+    .formSection {
+        width: 50%;
+        margin-bottom: 0;
+    }
+
+    .imageSection {
+        width: 50%;
+        padding-right: 2rem;
+        justify-content: flex-start;
+    }
+
+    .image {
+        margin-left: 1rem;
+    }
+}
+
+/* Mobile view adjustments */
+@media (max-width: 767px) {
+    .headerButtons {
+        gap: 0.5rem;
+    }
+
+    .customerButton,
+    .advisorButton {
+        padding: 0.25rem 0.75rem;
+        font-size: 12px;
+    }
+
+    .formTitle {
+        font-size: 1.5rem;
+    }
+
+    .formSubtitle {
+        font-size: 0.875rem;
+    }
+
+    .socialButton {
+        padding: 0.25rem 0.5rem;
+        font-size: 8px;
+    }
+
+    .loginButton {
+        padding: 0.5rem;
+    }
+
+    .image {
+        max-width: 90%;
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .imageSection {
+        padding-right: 3rem;
+    }
+}

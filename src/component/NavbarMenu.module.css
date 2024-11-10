@@ -1,0 +1,116 @@
+.responsivePaddingNavbar {
+    padding: 2rem 1.5rem;
+}
+
+@media (max-width: 480px) {
+    .responsivePaddingNavbar {
+        padding-left: 19vw;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 640px) {
+    .responsivePaddingNavbar {
+        padding-left: 45vw;
+    }
+}
+
+@media (min-width: 768px) {
+    .responsivePaddingNavbar {
+        padding-left: 60vw;
+    }
+}
+
+
+
+
+@media (min-width: 1024px) {
+    .responsivePaddingNavbar {
+        padding-left: 66vw;
+    }
+}
+
+@media (min-width: 1440px) {
+    .responsivePaddingNavbar {
+        padding-left: 74vw;
+    }
+}
+
+@media (min-width: 1920px) {
+    .responsivePaddingNavbar {
+        padding-left: 75vw;
+    }
+}
+
+@media (min-width: 2560px) {
+    .responsivePaddingNavbar {
+        padding-left: 80vw;
+    }
+}
+
+@media (min-width: 3840px) {
+    .responsivePaddingNavbar {
+        padding-left: 95vw;
+    }
+}
+
+
+.menuContent {
+    height: 100%;
+    overflow-y: auto;
+    padding: 2rem;
+}
+
+.menuContent::-webkit-scrollbar {
+    width: 8px;
+}
+
+.menuContent::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.closeButton {
+    position: fixed;
+    z-index: 9999;
+    top: 20px;
+    right: 20px;
+    overflow: hidden;
+    transition: top 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+@media (min-width: 1024px) {
+    .closeButton {
+        top: 20px;
+        left: 59%;
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 2559px) {
+    .closeButton {
+        top: 45px;
+        left: 74%;
+    }
+}
+
+@media (min-width: 2560px) {
+    .closeButton {
+        top: 120px;
+        left: 74vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .closeButton {
+        top: 10px;
+        right: 10px;
+        left: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .closeButton {
+        top: 5px;
+        right: 5px;
+        left: auto;
+    }
+}

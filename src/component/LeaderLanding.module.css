@@ -1,0 +1,67 @@
+/* Scrolling Wrapper */
+.scrollingWrapperLeader {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.eventsGridLeader {
+    display: flex;
+    white-space: nowrap;
+    animation: scrollHorizontal 260s linear infinite;
+}
+
+@keyframes scrollHorizontal {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.leaderCard {
+    flex-shrink: 0;
+    width: 250px;
+    margin-right: 20px;
+}
+
+.cardImage {
+    width: 100%;
+    height: auto;
+}
+
+.glowText {
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.7), 0 0 30px rgba(255, 215, 0, 0.5);
+    font-size: 1.1rem;
+}
+
+@media (max-width: 1024px) {
+    .leaderCard {
+        width: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    .leaderCard {
+        width: 180px;
+    }
+}
+
+@media (max-width: 425px) {
+    .leaderCard {
+        width: 200px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 320px) {
+    .leaderCard {
+        width: 200px;
+        margin-right: 5px;
+    }
+}

@@ -1,0 +1,149 @@
+.shadowContainer {
+    background: radial-gradient(at center, rgba(159, 115, 28, 0.6) -100%, rgba(141, 126, 43, 0) 70%);
+    position: absolute;
+    top: -22%;
+    right: -350px;
+    width: 800px;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulse 3s infinite ease-in-out;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+@keyframes slideUpFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.customFadeInUp {
+    animation: slideUpFadeIn 0.6s ease-out forwards;
+}
+
+.customScaleUp {
+    transition: transform 0.3s ease-in-out;
+}
+
+.customScaleUp:hover {
+    transform: scale(1.05);
+}
+
+@keyframes advanced3DSlideUpFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(100px) rotateX(60deg) scale(0.5);
+        filter: blur(4px);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translateY(-20px) rotateX(20deg) scale(1.2);
+        filter: blur(2px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotateX(0deg) scale(1);
+        filter: blur(0);
+    }
+}
+
+.customAdvanced3DAnimation {
+    animation: advanced3DSlideUpFadeIn 1.5s cubic-bezier(0.5, -0.5, 0.3, 1.5) forwards;
+    transform-origin: bottom center;
+    perspective: 1000px;
+}
+
+.customHoverEffect {
+    position: relative;
+    transition: transform 0.7s ease-out, box-shadow 0.7s ease-out;
+    transform-style: preserve-3d;
+}
+
+.customHoverEffect:hover {
+    transform: scale(1.2) rotateY(15deg) rotateX(10deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.customHoverEffect::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+    z-index: -1;
+    transform: scale(0.95);
+    filter: blur(20px);
+    transition: transform 0.7s ease-out;
+}
+
+.customHoverEffect:hover::before {
+    transform: scale(1.1);
+}
+
+@keyframes rippleEffect {
+    0% {
+        opacity: 0.8;
+        transform: scale(0.1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
+
+.customAdvancedHoverEffect {
+    position: relative;
+    transition: transform 0.6s ease-out, box-shadow 0.6s ease-out;
+    transform-style: preserve-3d;
+}
+
+.customAdvancedHoverEffect:hover {
+    transform: scale(1.15) rotateY(15deg) rotateX(10deg) skew(5deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.customAdvancedHoverEffect::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle, rgba(214, 182, 64, 0.15), transparent);
+    z-index: -1;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.customAdvancedHoverEffect:hover::before {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 1;
+}
+
+.customAdvancedHoverEffect::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: rippleEffect 0.6s ease-out forwards;
+}
